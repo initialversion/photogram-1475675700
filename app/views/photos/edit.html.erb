@@ -27,6 +27,15 @@
         <%= select_tag(:owner_id, options_from_collection_for_select(User.all, :id, :created_at, @photo.owner_id), :class => "form-control") %>
       </div>
 
+      <!-- Label and input for image -->
+      <div class="form-group">
+        <label for="image" class="control-label">
+          Image
+        </label>
+
+        <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @photo.image %>">
+      </div>
+
       <button class="btn btn-warning">
         Update Photo
       </button>
